@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import SearchBox from "../components/SearchBox";
+import SearchBox from "./SearchBox";
 import dayjs from "dayjs";
 import { DAYS } from "../utils/constant";
 import useSearchCity from "../hooks/useSearchCity";
-import SuggestionBox from "../components/SuggestionBox";
+import SuggestionBox from "./SuggestionBox";
 
 type props = {
   TodayWeather: any;

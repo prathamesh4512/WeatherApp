@@ -5,7 +5,7 @@ import {
   convertKelvinToCelsius,
   convertKelvinToFahrenheit,
 } from "../utils/helper";
-import LeftSideBar from "./LeftSideBar";
+import LeftSideBar from "../components/LeftSideBar";
 import Navbar from "../components/Navbar";
 import TempCardList from "../components/TempCardList";
 import HightLights from "../components/HightLights";
