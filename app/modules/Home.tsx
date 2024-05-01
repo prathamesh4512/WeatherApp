@@ -34,6 +34,7 @@ const Home = () => {
           convertTemp={convertTemp}
           currentCity={currentCity}
           setCurrentCity={setCurrentCity}
+          cityData={cityData}
         />
         <div className="bg-gray-100 p-8 flex flex-col gap-16">
           <Navbar

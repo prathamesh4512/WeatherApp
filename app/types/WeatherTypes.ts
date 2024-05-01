@@ -8,3 +8,9 @@ export type WeatherTypes = {
     wind:{speed:number}
     visibility:number;
   }
+
+export type cityDataType = {
+    sunset: number;
+    sunrise: number;
+    cityImage?:string;
+  }

@@ -4,6 +4,7 @@ import dayjs from "dayjs";
 import { DAYS } from "../utils/constant";
 import useSearchCity from "../hooks/useSearchCity";
 import SuggestionBox from "./SuggestionBox";
+import { cityDataType } from "../types/WeatherTypes";
 
 type props = {
   TodayWeather: any;
@@ -11,12 +12,15 @@ type props = {
   convertTemp: Function;
   setCurrentCity: Function;
   currentCity: string;
+  cityData:cityDataType;
 };
 
 const LeftSideBar = ({
   TodayWeather,
+  cityData,
   tempType,
   convertTemp,
+  currentCity,
   setCurrentCity,
 }: props) => {
   const [city, setCity] = useState("");
@@ -41,9 +45,8 @@ const LeftSideBar = ({
     setCurrentCity(value)
     setShowSuggestions(false);
   }
-
   return (
-    <div className="bg-white p-8 flex flex-col gap-10">
+    <div className="bg-white p-8 flex flex-col gap-8">
       <div className="relative hidden md:flex">
         <SearchBox
           value={city}
@@ -78,7 +81,7 @@ const LeftSideBar = ({
         </span>
       </h4>
       <hr className="mt-auto"/>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-6">
         <div className="flex gap-4 items-center">
           <img
         src={`https://openweathermap.org/img/wn/${TodayWeather?.weather?.[0]?.icon}.png`}
@@ -96,6 +99,9 @@ const LeftSideBar = ({
             </span>
           </div>
         )}
+        <div className="h-[80px] bg-cover w- rounded-xl flex items-center justify-center text-white font-medium" style={{backgroundImage:`url(${cityData?.cityImage})`}}>
+          {currentCity}
+        </div>
       </div>
 
       <div className="relative">
