@@ -21,7 +21,7 @@ type Props = {
 const HightLights = ({TodayWeather,loading,cityData}: Props) => {
   return (
     <div>
-    <h2 className="mb-4 font-medium">Today's Highlights</h2>
+    <h2 className="mb-4 font-medium">{"Today's Highlights"}</h2>
     <div className="grid grid-cols-3 gap-[12px]">
       {loading ? (
         Array(6)
