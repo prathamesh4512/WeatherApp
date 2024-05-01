@@ -3,20 +3,19 @@ import VerticalMeter from './VerticalMeter';
 
 type Props = {
     title:string;
-    humidity:number;
+    visibility:number;
 }
 
-const HumidityCard = ({title,humidity}: Props) => {
+const VisibilityCard = ({title,visibility}: Props) => {
   return (
     <div className='bg-white rounded-xl p-4 flex flex-col gap-4'>
         <span className='text-gray-400 text-sm'>{title}</span>
         <div className='flex justify-between h-[70px] items-center'>
-            <h1 className='text-5xl relative' >{humidity} <sup className='text-xl absolute top-[2px]'>%</sup></h1>
-            <VerticalMeter value={2*(100-humidity)}/>
+            <h1 className='text-5xl relative' >{visibility}<span className='text-sm'>Km</span></h1>
         </div>
-        <span className='text-sm'>Normal</span>
+        <span className='text-sm'>Average</span>
     </div>
   )
 }
 
-export default HumidityCard
+export default VisibilityCard

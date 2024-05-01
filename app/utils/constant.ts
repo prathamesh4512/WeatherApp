@@ -1,0 +1,1 @@
+export const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"]
